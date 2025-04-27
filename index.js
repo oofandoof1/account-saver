@@ -21,6 +21,11 @@ app.post('/api/new_endpoint', async (req, res) => {
     }
 });
 
+// เพิ่ม endpoint สำหรับ GET เพื่อการทดสอบ
+app.get('/api/new_endpoint', (req, res) => {
+    res.json({ message: 'This endpoint is working! Use POST to send account data.' });
+});
+
 // เพิ่ม endpoint เพื่อดูข้อมูล (สำหรับการทดสอบ)
 app.get('/api/get-accounts', (req, res) => {
     res.json(accounts);
